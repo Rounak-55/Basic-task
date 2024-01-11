@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task 2</title>
+	<style>
+		body {
+			background-color: #6600cc;
+			margin: 0;
+			padding: 2rem;
+			}
+		.letter {
+				color: white;
+				padding: 3rem;
+				width: 700px;
+				box-shadow: 0 0 15px #1a0033;
+				border-radius: 1rem;
+				font-size: 30px;
+				margin: 0 auto;
+
+			}
+		#address {
+			display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				align-items: center;
+
+		}
+		h1 {
+			border-bottom: 1px dashed white;
+			padding: 1rem;
+			font-family: roboto;
+		}
+		.drop {
+   position: absolute;
+   height: 200px;
+   width: 200px;
+   background: #54ABFB;
+   border-radius: 51% 49% 48% 52% / 62% 44% 56% 38%;
+   opacity: 0.8;
+   border: 2px solid #1a0033;
+  }
+
+  .drop::before {
+   content: "";
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   background: #318CFE;
+   border-radius: 51% 49% 48% 52% / 62% 44% 56% 38%;
+   box-shadow: -20px 30px 16px #1B6CFB, -40px 60px 32px #1b6cfb, inset -6px 6px 10px #1B6CFB, inset 2px 6px 10px #1a74e5, inset 20px -20px 22px white, inset 40px -40px 44px #a8ceff;
+  }
+
+  .drop::after {
+   content: "";
+   position: absolute;
+   height: 40px;
+   width: 40px;
+   background: #E6FDFB;
+   border-radius: 44% 56% 46% 54% / 36% 50% 50% 64%;
+   left: 130px;
+   top: 40px;
+   box-shadow: 16px 40px 0 -10px white;
+   opacity: 0.8;
+  }
+
+  .drop1 {
+   left: 100px;
+   top: 50px;
+  }
+
+  .drop2 {
+   right: 100px;
+   bottom: 50px;
+   z-index: -1;
+   border-radius: 46% 50% 39% 54% / 56% 57% 50% 50%;
+  }
+
+  .drop2::before {
+   border-radius: 46% 50% 39% 54% / 56% 57% 50% 50%;
+  }
+.letter {
+    backdrop-filter: blur(6px) saturate(117%);
+    -webkit-backdrop-filter: blur(6px) saturate(117%);
+    background-color: rgba(255, 255, 255, 0.14);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+}
+	</style>
+</head>
+<body>
+	<div class="drop drop1"></div>
+ <div class="drop drop2"></div>
+	<div class="letter">
+		
+	<h1>Sample Business Letter</h1>
+
+	<div id="address">
+		<div>
+		<em>Ken's Cheese House <br><sub>34</sub>Chatley Avenue <br>Seattle, WA <sub>98765</sub></em>
+	</div>
+	<div>
+		<p>
+			October <sub>23, 2017</sub>
+		</p>
+	</div>
+	<div>
+		<p>
+		<em>
+			Fred Flintstone, <br> Sales Manager <br> <sub>456</sub> Rubble road
+			<br>Rockville, IL <sub>78777</sub>
+		</em>
+	</p>
+	</div>
+	</div>
+	<p>
+		Dear Mr. Flintstone
+		<br>
+		With reference to our <u>telephone conversation</u> today, I am writing
+		to confirm your order for: 120 x cheddar Delux Ref.No. 856. <br>
+		The order will be shipped within three days via UPS and should
+		arrive at your store in about 10 days. <br>
+		please conntact us again if we can help you any way 
+	</p>
+	<p>
+		Your sincerely,
+		<br>
+		Kenneth Beare
+		<br>
+		Director of Ken's Cheese House
+	</p>
+	</div>
+</body>
+</html>
