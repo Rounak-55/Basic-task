@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calculator</title>
+	<style>
+		body {
+			margin: 0px;
+			height: 0px;
+			font-family: sans-serif;
+			font-weight: bold;
+		}
+		.calculator {
+			height: 700px;
+			width: 410px;
+			padding: 1rem;
+			transform: translate(160%, 10%);
+			background-color: rgb(26, 26, 40);
+			border-radius: 10px;
+		}
+		.screen {
+			height: 200px;
+			width: 400px;
+			background-color: rgb(0, 0, 26);
+			border-radius: 6px;
+			border: 1px solid rgb(101, 101, 154);
+			color: white;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 50px;
+		}
+		.cell {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
+		.switch {
+			height: 100px;
+			width: 95px;
+			font: 30px white;
+			border: 1px;
+			border-radius: 4px;
+			background-color: rgb(153, 153, 255);
+		}
+		#reset {
+			height: 100px;
+			width: 145px;
+			font-size: 30px;
+			border: 1px;
+			border-radius: 4px;
+			background-color: rgb(255, 255, 153);
+		}
+		#delet {
+			height: 100px;
+			width: 145px;
+			font-size: 30px;
+			margin-left: 4px;
+			border: 1px;
+			border-radius: 4px;
+			background-color: rgb(255, 71, 26);
+		}
+		#equal {
+			height: 100px;
+			width: 195px;
+			font: 30px white;
+			border: 1px;
+			border-radius: 4px;
+			background-color: rgb(102, 255, 102);
+		}
+		#devide {
+			margin-left: 4px;
+			background-color: rgb(255, 128, 128);
+		}
+		#multiply {
+			background-color: rgb(255, 128, 128);
+		}
+		#plus {
+			background-color: rgb(255, 128, 128);
+		}
+		#minus {
+			background-color: rgb(255, 128, 128);
+		}
+		#zero {
+			margin-left: 8px;
+		}
+		#equal {
+			margin-left: 8px;
+		}
+	</style>
+	
+</head>
+<body>
+	<div class="calculator">
+		<div class="screen" id="screen">
+		</div>
+		<div class="commandCell">
+			<div class="box">
+				<button id="reset">AC</button>
+				<button id="delet">DEL</button>
+				<button class="switch" id="devide">/</button>
+			</div>
+			<div class="cell">
+				<button class="switch" id="one">1</button>
+				<button class="switch" id="two">2</button>
+				<button class="switch" id="three">3</button>
+				<button class="switch" id="multiply">*</button>
+			</div>
+			<div class="cell">
+				<button class="switch" id="four">4</button>
+				<button class="switch" id="five">5</button>
+				<button class="switch" id="six">6</button>
+				<button class="switch" id="plus">+</button>
+			</div>
+			<div class="cell">
+				<button class="switch" id="seven">7</button>
+				<button class="switch" id="eight">8</button>
+				<button class="switch" id="nine">9</button>
+				<button class="switch" id="minus">-</button>
+			</div>
+			<div class="cell">
+				<button class="switch" id="dot">.</button>
+				<button class="switch" id="zero">0</button>
+				<button id="equal">=</button>
+			</div>
+		</div>
+	</div>
+	
+</body>
+<script>
+		const btnone = document.getElementById('one')
+		const btntwo = document.getElementById('two')
+		const btnthree = document.getElementById('three')
+		const btnfour = document.getElementById('four')
+		const btnfive = document.getElementById('five')
+		const btnsix = document.getElementById('six')
+		const btnseven = document.getElementById('seven')
+		const btneight = document.getElementById('eight')
+		const btnnine = document.getElementById('nine')
+		const btnzero = document.getElementById('zero')
+		const btnpoont= document.getElementById('point')
+		const btneqaal = document.getElementById('equal')
+		const btndevide = document.getElementById('devide')
+		const btnmultiply = document.getElementById('multiply')
+		const btnplus = document.getElementById('plus')
+		const btnminus = document.getElementById('minus')
+		const btnReset = document.getElementById('reset')
+		const btnDelet = document.getElementById('delet')
+		const screen = document.getElementById('screen')
+		let output = ""
+
+		btnone.addEventListener('click', () => {
+			output +='1'
+			screen.innerHTML = output
+		})
+
+		btntwo.addEventListener('click', () => {
+			output +='2'
+			screen.innerHTML = output
+		})
+
+		btnthree.addEventListener('click', () => {
+			output +='3'
+			screen.innerHTML = output
+		})
+
+		btnfour.addEventListener('click', () => {
+			output +='4'
+			screen.innerHTML = output
+		})
+
+		btnfive.addEventListener('click', () => {
+			output +='5'
+			screen.innerHTML = output
+		})
+
+		btnsix.addEventListener('click', () => {
+			output +='6'
+			screen.innerHTML = output
+		})
+
+		btnseven.addEventListener('click', () => {
+			output +='7'
+			screen.innerHTML = output
+		})
+
+		btneight.addEventListener('click', () => {
+			output +='8'
+			screen.innerHTML = output
+		})
+
+		btnnine.addEventListener('click', () => {
+			output +='9'
+			screen.innerHTML = output
+		})
+
+		btnzero.addEventListener('click', () => {
+			output +='0'
+			screen.innerHTML = output
+		})
+
+		btndevide.addEventListener('click', () => {
+			output +='/'
+			screen.innerHTML = output
+		})
+
+		btnmultiply.addEventListener('click', () => {
+			output +='*'
+			screen.innerHTML = output
+		})
+
+		btnminus.addEventListener('click', () => {
+			output +='-'
+			screen.innerHTML = output
+		})
+
+		btnplus.addEventListener('click', () => {
+			output +='+'
+			screen.innerHTML = output
+		})
+		btneqaal.addEventListener('click', () => {
+			output = eval(output)
+			screen.innerHTML = output
+		})
+	</script>
+</html>
