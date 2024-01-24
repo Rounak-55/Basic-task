@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic HTML</title>
+</head>
+
+<body>
+    <div id="root">
+
+    </div>
+    <script>
+        let txt = ""
+        const root = document.querySelector("#root")
+        const div = document.createElement("div")
+        div.style.border = "2px solid black";
+        div.style.padding = "1rem";
+
+        const input1 = document.createElement('input')
+        const input2 = document.createElement('input')
+        const input3 = document.createElement('input')
+
+        input1.addEventListener("keydown", () => {
+            txt += input1.value;
+            div.innerText = input1.value
+        })
+
+        root.append(div, input1, input2, input3)
+
+    </script>
+
+</body>
+
+</html>
