@@ -33,3 +33,15 @@ const nums = [1, 6, 3, 3, 6, 8, 2, 1, 3, 567, 34, 9]
 for (let i = 0; i < nums.length; i++) {
     console.log(nums[i])
 }
+
+const person = {
+    "name": "Rounak Sarkar",
+    "age": 20,
+    "phone": [99999999, 777777777]
+}
+
+console.log(person["name"].slice(2, 5))
+console.log(person["phone"][0])
+
+person["weight"] = 100
+console.log(person)
